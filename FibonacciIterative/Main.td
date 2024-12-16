@@ -1,12 +1,12 @@
-class Fibonacci<int n> {
-    int Value = !if(!or(!eq(n, 0), !eq(n, 1)), n, !add(Fibonacci<!add(n, -2)>.Value, Fibonacci<!add(n, -1)>.Value));
-}
+include "FibonacciIterative/FibonacciIterative.td"
 
 class Tester<int N, int Expected> {
     int Actual = Fibonacci<N>.Value;
     assert !eq(Expected, Actual),
+    NAME # " FAILED:\n"
     "Calculated wrong value for " # N # "th Fibonacci number. " #
     "Expected: " # Expected # ", Actual: " # Actual;
 }
 
-def Test : Tester<47, 2971215073>;
+def Test1 : Tester<47, 2971215073>;
+def Test2 : Tester<92, 7540113804746346429>;
