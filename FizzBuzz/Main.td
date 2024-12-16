@@ -1,4 +1,4 @@
-include "FizzBuzz/FizzBuzz.td"
+include "FizzBuzz.td"
 
 class Tester<int In, list<string> Expected> {
     list<string> Actual = FizzBuzz<In>.Out;

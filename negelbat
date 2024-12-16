@@ -16,7 +16,7 @@ fi
 START_TIME=$(perl -MTime::HiRes=time -e 'printf("%.6f\n", time)')
 
 echo "Running llvm-tblgen on $MAIN_TD:" | tee testlog.txt
-llvm-tblgen "$MAIN_TD" >> testlog.txt 2>&1
+llvm-tblgen -I "$INPUT_FOLDER/" "$MAIN_TD" >> testlog.txt 2>&1
 ERROR_CODE=$?
 
 END_TIME=$(perl -MTime::HiRes=time -e 'printf("%.6f\n", time)')

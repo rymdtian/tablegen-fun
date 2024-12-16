@@ -1,4 +1,4 @@
-include "FibonacciIterative/FibonacciIterative.td"
+include "FibonacciIterative.td"
 
 class Tester<int N, int Expected> {
     int Actual = Fibonacci<N>.Value;

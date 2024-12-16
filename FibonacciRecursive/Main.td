@@ -1,4 +1,4 @@
-include "FibonacciRecursive/FibonacciRecursive.td"
+include "FibonacciRecursive.td"
 
 class Tester<int N, int Expected> {
     int Actual = Fibonacci<N>.Value;
